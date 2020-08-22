@@ -8,6 +8,38 @@
     <artifactId>FrameworkAndAutomationAmazonApp</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+<!--    <properties>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+    </properties>-->
 
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+    <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>java-client</artifactId>
+        <version>7.0.0</version>
+    </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+    <plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+            <source>11</source>
+            <target>11</target>
+        </configuration>
+    </plugin>
+    </plugins>
+    </build>
 </project>
 
