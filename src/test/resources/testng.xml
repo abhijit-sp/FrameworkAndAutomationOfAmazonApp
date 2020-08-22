@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Amazon Automation">
+    <test name="Test" time-out="3600000">
+        <classes>
+            <class name="PurchaseTests"/>
+        </classes>
+    </test>
+</suite>
