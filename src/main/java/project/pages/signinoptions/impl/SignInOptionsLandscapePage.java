@@ -24,8 +24,7 @@ public class SignInOptionsLandscapePage extends SignInOptionsPage {
 
     @Override
     public void clickSignInButton() {
-        //signInButton.click();
-        skipSignInButton.click();
+        signInButton.click();
     }
 
     @Override
