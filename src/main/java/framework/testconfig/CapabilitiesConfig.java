@@ -21,14 +21,19 @@ public class CapabilitiesConfig {
 
         String platformNameValue = properties.getProperty("platform.name");
         String automationNameValue = properties.getProperty("automation.name");
-        Boolean noResetValue = Boolean.getBoolean(properties.getProperty("noReset"));
-        Boolean fullResetValue = Boolean.getBoolean(properties.getProperty("fullReset"));
+        String noResetValue = properties.getProperty("noReset");
+        String fullResetValue = properties.getProperty("fullReset");
+        if (!noResetValue.isEmpty()) {
+            capabilitiesConfigMap.put(NO_RESET, Boolean.parseBoolean(noResetValue));
+        }
+        if (!noResetValue.isEmpty()) {
+            capabilitiesConfigMap.put(FULL_RESET, Boolean.parseBoolean(fullResetValue));
+        }
 
         capabilitiesConfigMap.put(PLATFORM_NAME, platformNameValue);
         capabilitiesConfigMap.put(AUTOMATION_NAME, automationNameValue);
-        capabilitiesConfigMap.put(NO_RESET, noResetValue);
-        capabilitiesConfigMap.put(FULL_RESET, fullResetValue);
 
+        System.out.println(capabilitiesConfigMap.toString());
         return capabilitiesConfigMap;
     }
 }
