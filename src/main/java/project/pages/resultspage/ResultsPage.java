@@ -7,6 +7,9 @@ import project.pages.BasePage;
 import java.util.List;
 import java.util.Map;
 
+/*
+A generic representation of the results page.
+ */
 public abstract class ResultsPage extends BasePage {
 
     public enum ProductDetails{

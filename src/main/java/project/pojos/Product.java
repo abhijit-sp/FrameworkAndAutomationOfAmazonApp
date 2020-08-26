@@ -2,6 +2,9 @@ package project.pojos;
 
 import java.util.Objects;
 
+/**
+ * This class is used to store all the details related to a product.
+ */
 public class Product {
 
     private String description;

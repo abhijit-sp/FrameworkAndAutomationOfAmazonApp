@@ -11,6 +11,9 @@ import project.pages.homepage.HomePage;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
+/*
+A concrete implementation of the HomePage in portrait mode.
+ */
 public class HomePagePortrait extends HomePage {
 
     public HomePagePortrait(AndroidDriver<MobileElement> driver) {

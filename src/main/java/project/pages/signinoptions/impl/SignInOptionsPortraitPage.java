@@ -8,6 +8,9 @@ import project.pages.signinoptions.SignInOptionsPage;
 
 import java.time.temporal.ChronoUnit;
 
+/*
+A concrete implementation of the SignInOptionsPage portrait mode.
+ */
 public class SignInOptionsPortraitPage extends SignInOptionsPage {
 
     public SignInOptionsPortraitPage(AndroidDriver<MobileElement> driver) {

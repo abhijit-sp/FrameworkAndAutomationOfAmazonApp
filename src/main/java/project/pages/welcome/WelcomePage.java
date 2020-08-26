@@ -8,6 +8,9 @@ import project.pages.BasePage;
 
 import java.time.temporal.ChronoUnit;
 
+/*
+A generic representation of the welcome screen.
+ */
 public abstract class WelcomePage extends BasePage {
 
 

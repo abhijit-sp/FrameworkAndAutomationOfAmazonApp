@@ -8,6 +8,9 @@ import project.pages.password.PasswordPage;
 
 import java.time.temporal.ChronoUnit;
 
+/*
+A concrete implementation of the PasswordPage in portrait mode.
+ */
 public class PasswordPagePortrait extends PasswordPage {
 
     public PasswordPagePortrait(AndroidDriver<MobileElement> driver) {

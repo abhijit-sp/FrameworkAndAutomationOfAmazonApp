@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+A concrete implementation of the ResultsPage in portrait mode.
+ */
 public class ResultsPagePortrait extends ResultsPage {
 
     public ResultsPagePortrait(AndroidDriver<MobileElement> driver) {

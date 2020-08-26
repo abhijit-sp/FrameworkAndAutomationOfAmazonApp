@@ -14,6 +14,10 @@ import java.net.URL;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * This class creates an AndroidDriver by setting the user mention desired capabilities from configuration files.
+ */
+
 public class Driver {
 
     private static AndroidDriver<MobileElement> driver;
@@ -21,6 +25,10 @@ public class Driver {
     private static Set<Map.Entry<String, Object>> deviceConfig;
     private static Set<Map.Entry<String, Object>> appConfig;
 
+    /**
+     *
+     * @return AndroidDriver
+     */
     public static AndroidDriver<MobileElement> getDriver() {
 
         DesiredCapabilities caps = new DesiredCapabilities();

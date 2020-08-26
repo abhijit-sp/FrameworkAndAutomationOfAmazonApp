@@ -3,7 +3,6 @@ package project.pages.proceedtobuy.impl;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidBy;
-import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AndroidFindBys;
 import io.appium.java_client.pagefactory.WithTimeout;
 import project.pages.proceedtobuy.ProceedToBuyPage;
@@ -11,17 +10,24 @@ import project.pages.proceedtobuy.ProceedToBuyPage;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
+/*
+A concrete implementation of the ProceedToBuyPage in portrait mode.
+ */
 public class ProceedToBuyPagePortrait extends ProceedToBuyPage {
 
     public ProceedToBuyPagePortrait(AndroidDriver<MobileElement> driver) {
         super(driver);
     }
 
-    @AndroidFindBy(xpath = "s")
-    @WithTimeout(time = 10, chronoUnit = ChronoUnit.SECONDS)
-    public MobileElement productDescription;
-
-    @AndroidFindBy(xpath = "s")
+    @AndroidFindBys({
+            @AndroidBy(xpath = "//android.view.View[@resource-id='activeCartViewForm']"),
+            @AndroidBy(xpath = "(//android.view.View)[1]"),
+            @AndroidBy(xpath = "(//android.view.View)[2]"),
+            @AndroidBy(xpath = "(//android.view.View)[1]"),
+            @AndroidBy(xpath = "(//android.view.View)[3]"),
+            @AndroidBy(xpath = "(//android.widget.ListView)[1]"),
+            @AndroidBy(xpath = "(//android.view.View)[1]"),
+    })
     @WithTimeout(time = 10, chronoUnit = ChronoUnit.SECONDS)
     public MobileElement productPrice;
 
@@ -42,11 +48,12 @@ public class ProceedToBuyPagePortrait extends ProceedToBuyPage {
 
     @Override
     public MobileElement getProductPrice() {
-        return null;
+        return productPrice;
     }
 
     @Override
     public void clickProceedToBuyButton() {
-
+        proceedToBuyButton.click();
     }
 }
+

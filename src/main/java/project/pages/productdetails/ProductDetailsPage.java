@@ -4,6 +4,9 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import project.pages.BasePage;
 
+/*
+A generic representation of the ProductDetailsPage.
+ */
 public abstract class ProductDetailsPage extends BasePage {
 
     public ProductDetailsPage(AndroidDriver<MobileElement> driver) {

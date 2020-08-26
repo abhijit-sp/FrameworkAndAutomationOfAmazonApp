@@ -8,6 +8,9 @@ import project.pages.BasePage;
 
 import java.time.temporal.ChronoUnit;
 
+/*
+A generic representation of the sign in options screen.
+ */
 public abstract class SignInOptionsPage extends BasePage {
 
     public SignInOptionsPage(AndroidDriver<MobileElement> driver) {

@@ -8,6 +8,9 @@ import project.pages.signinoptions.SignInOptionsPage;
 
 import java.time.temporal.ChronoUnit;
 
+/*
+A concrete implementation of the SignInOptionsPage landscape mode.
+ */
 public class SignInOptionsLandscapePage extends SignInOptionsPage {
 
     public SignInOptionsLandscapePage(AndroidDriver<MobileElement> driver) {

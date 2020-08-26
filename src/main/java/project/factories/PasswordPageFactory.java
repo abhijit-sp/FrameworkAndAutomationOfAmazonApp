@@ -7,17 +7,17 @@ import project.pages.password.PasswordPage;
 import project.pages.password.impl.PasswordPageLandscape;
 import project.pages.password.impl.PasswordPagePortrait;
 
+/*
+    A factory that creates a portrait or landscape PaswordPage
+    based on the screen orientation.
+ */
 public class PasswordPageFactory {
 
-    private static PasswordPage passwordPage;
-
-    public static PasswordPage getInstance(AndroidDriver<MobileElement> driver){
+    public static PasswordPage getInstance(AndroidDriver<MobileElement> driver) {
         ScreenOrientation screenOrientation = driver.getOrientation();
-        if (screenOrientation.equals(ScreenOrientation.PORTRAIT)){
-            passwordPage = new PasswordPagePortrait(driver);
-        } else if (screenOrientation.equals(ScreenOrientation.LANDSCAPE)){
-            passwordPage = new PasswordPageLandscape(driver);
+        if (screenOrientation.equals(ScreenOrientation.LANDSCAPE)) {
+            return new PasswordPageLandscape(driver);
         }
-        return passwordPage;
+        return new PasswordPagePortrait(driver);
     }
 }

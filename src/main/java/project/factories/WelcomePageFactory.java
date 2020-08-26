@@ -7,17 +7,19 @@ import project.pages.welcome.WelcomePage;
 import project.pages.welcome.impl.WelcomePageLandscape;
 import project.pages.welcome.impl.WelcomePagePortrait;
 
+/*
+    A factory that creates a portrait or landscape WelcomePage
+    based on the screen orientation.
+ */
 public class WelcomePageFactory {
-
-    private static WelcomePage welcomePage;
 
     public static WelcomePage getInstance(AndroidDriver<MobileElement> driver){
         ScreenOrientation screenOrientation = driver.getOrientation();
         if (screenOrientation.equals(ScreenOrientation.PORTRAIT)){
-            welcomePage = new WelcomePagePortrait(driver);
+            return new WelcomePagePortrait(driver);
         } else if (screenOrientation.equals(ScreenOrientation.LANDSCAPE)){
-            welcomePage = new WelcomePageLandscape(driver);
+            return new WelcomePageLandscape(driver);
         }
-        return welcomePage;
+        return new WelcomePagePortrait(driver);
     }
 }

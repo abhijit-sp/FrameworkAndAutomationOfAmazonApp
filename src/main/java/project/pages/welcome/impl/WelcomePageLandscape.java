@@ -7,7 +7,9 @@ import io.appium.java_client.pagefactory.WithTimeout;
 import project.pages.welcome.WelcomePage;
 
 import java.time.temporal.ChronoUnit;
-
+/*
+A concrete implementation of the WelcomePage landscape mode.
+ */
 public class WelcomePageLandscape extends WelcomePage {
 
     public WelcomePageLandscape(AndroidDriver<MobileElement> driver) {

@@ -7,16 +7,18 @@ import project.pages.resultspage.ResultsPage;
 import project.pages.resultspage.impl.ResultsPageLandscape;
 import project.pages.resultspage.impl.ResultsPagePortrait;
 
+/*
+    A factory that creates a portrait or landscape ResultsPage
+    based on the screen orientation.
+ */
 public class ResultsPageFactory {
-
-    private static ResultsPage resultsPage;
 
     public static ResultsPage getInstance(AndroidDriver<MobileElement> driver){
         if (driver.getOrientation().equals(ScreenOrientation.PORTRAIT)){
-            resultsPage = new ResultsPagePortrait(driver);
+            return new ResultsPagePortrait(driver);
         } else if (driver.getOrientation().equals(ScreenOrientation.LANDSCAPE)){
-            resultsPage = new ResultsPageLandscape(driver);
+            return new ResultsPageLandscape(driver);
         }
-        return resultsPage;
+        return new ResultsPagePortrait(driver);
     }
 }

@@ -7,7 +7,9 @@ import io.appium.java_client.pagefactory.WithTimeout;
 import project.pages.welcome.WelcomePage;
 
 import java.time.temporal.ChronoUnit;
-
+/*
+A concrete implementation of the WelcomePage portrait mode.
+ */
 public class WelcomePagePortrait extends WelcomePage {
 
     public WelcomePagePortrait(AndroidDriver<MobileElement> driver) {

@@ -13,6 +13,9 @@ import project.pages.productdetails.ProductDetailsPage;
 
 import java.time.temporal.ChronoUnit;
 
+/*
+A concrete implementation of the ProductDetailsPage in portrait mode.
+ */
 public class ProductDetailsPagePortrait extends ProductDetailsPage {
 
     public ProductDetailsPagePortrait(AndroidDriver<MobileElement> driver) {
@@ -23,13 +26,6 @@ public class ProductDetailsPagePortrait extends ProductDetailsPage {
     @WithTimeout(time = 3, chronoUnit = ChronoUnit.SECONDS)
     public MobileElement cartButton;
 
-  /*  @AndroidFindBys({
-            @AndroidBy(id = "title_feature_div"),
-            @AndroidBy(className = "android.view.View")
-    })
-    @WithTimeout(time = 3, chronoUnit = ChronoUnit.SECONDS)
-    public MobileElement description;*/
-
     @AndroidFindBys({
             @AndroidBy(xpath = "//android.view.View[@resource-id='title_feature_div']"),
             @AndroidBy(className = "android.view.View")
@@ -37,12 +33,7 @@ public class ProductDetailsPagePortrait extends ProductDetailsPage {
     @WithTimeout(time = 3, chronoUnit = ChronoUnit.SECONDS)
     public MobileElement description;
 
-    @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().resourceId(\"com.amazon.mShop.android.shopping:id/a-page\")).scrollIntoView(new UiSelector().textContains(\"Get an OTP on your phone\"));")
-    @WithTimeout(time = 15, chronoUnit = ChronoUnit.SECONDS)
-    public MobileElement getOTPButton;
-
-    //@AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().resourceId(\"com.amazon.mShop.android.shopping:id/a-page\")).scrollIntoView(new UiSelector().resourceId(\"com.amazon.mShop.android.shopping:id/atfRedesign_priceblock_priceToPay\"));")
-    @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().resourceId(\"com.amazon.mShop.android.shopping:id/a-page\")).scrollIntoView(new UiSelector().textContains(\"rupees\"));")
+   @AndroidFindBy(uiAutomator = "new UiScrollable(new UiSelector().resourceId(\"com.amazon.mShop.android.shopping:id/a-page\")).scrollIntoView(new UiSelector().textContains(\"rupees\"));")
     @WithTimeout(time = 5, chronoUnit = ChronoUnit.SECONDS)
     public MobileElement price;
 

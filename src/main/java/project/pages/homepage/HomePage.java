@@ -6,6 +6,9 @@ import project.pages.BasePage;
 
 import java.util.List;
 
+/*
+    Generic representation of the actions that can be performed on the home page.
+ */
 public abstract class HomePage extends BasePage {
 
     public HomePage(AndroidDriver<MobileElement> driver) {

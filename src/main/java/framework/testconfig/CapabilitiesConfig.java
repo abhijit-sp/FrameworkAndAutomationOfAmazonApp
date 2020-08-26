@@ -8,6 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ *  This class helps in retrieving all the DesiredCapabilities related configuration defined by the user.
+ */
 public class CapabilitiesConfig {
 
     private static Map<String, Object> capabilitiesConfigMap = new HashMap<String, Object>();
@@ -16,6 +19,11 @@ public class CapabilitiesConfig {
     private static final String NO_RESET = "noReset";
     private static final String FULL_RESET = "fullReset";
 
+    /**
+     *  This method retrieves all the DesiredCapabilities related configuration from capabilities.properties
+     * @return Map of DesiredCapabilities properties and values defined by the user.
+     * @throws IOException
+     */
     public static Map<String, Object> getCapabilitiesConfig() throws IOException {
         Properties properties = PropertiesReader.loadProperties(new FileInputStream("src/main/resources/capabilities.properties"));
 
