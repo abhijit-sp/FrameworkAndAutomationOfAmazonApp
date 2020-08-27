@@ -101,6 +101,10 @@ public class PurchaseTests extends BaseTest {
         checkOutPage.clickContinueButton();
     }
 
+    /*
+    Make sure you have an Excel file created amd in the 1st sheet's 1st row add Amazon username,
+    Amazon password and the search query in the first 3 cells respectively.
+     */
     @DataProvider
     public Object[][] provideQueryData() {
         String[][] data = new String[1][3];
